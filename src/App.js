@@ -14,8 +14,10 @@ import Profile from './components/profile'
 import Recent_payments from './components/recent_payments'
 import Services from './components/services'
 import Sign_up from './components/sign_up'
+import { useState } from 'react'
 
 const App = () => {
+  const [selectFile, setSelectFile] = useState(false);
   return (
     <Routes>
       <Route path='login_landing_page' element={<Login_landing_page/>} />
@@ -28,7 +30,7 @@ const App = () => {
       <Route path='inbox' element={<Inbox />} />
       <Route path='location' element={<Location/>} />
       <Route path='login' element={<Login/>} />
-      <Route path='profile' element={<Profile/>} />
+      <Route path='profile' element={<Profile selectFile = {selectFile} setSelectFile = {setSelectFile}/>} />
       <Route path='recent_payments' element={<Recent_payments/>} />
       <Route path='services' element={<Services/>} />
       <Route path='sign_up' element={<Sign_up/>} />

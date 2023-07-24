@@ -11,3 +11,13 @@
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
 }
+nav{
+    background: rgb(18, 18, 95);
+    height: 70px;
+    width: 100%;
+}
+h1{
+    text-align: center;
+    color: white;
+    padding-top: 20px;
+}
