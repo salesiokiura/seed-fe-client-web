@@ -12,6 +12,7 @@ const ForgotPassword = () => {
     // Assume the email is valid if it's not empty for simplicity
     if (email) {
       setShowPasswordForm(true);
+  
     } else {
       alert("Please enter a valid email address.");
     }
@@ -74,7 +75,7 @@ const ForgotPassword = () => {
       <div id="passwordForm" style={{ display: showPasswordForm && !showSuccessMessage ? "block" : "none" }}>
         <div className="form-group">
           <center>
-            <h3>Enter Verification Code</h3>
+            <h3><b>Enter Verification Code </b></h3>
           </center>
           <label htmlFor="code">Enter Code:</label>
           <input
@@ -155,7 +156,7 @@ const styles = {
     padding: '10px',
     borderRadius: '40px',
     border: 'none',
-    backgroundColor: '#d52385',
+    backgroundColor: '#2A4454',
     color: '#fff',
     cursor: 'pointer',
     margin: 'auto',
