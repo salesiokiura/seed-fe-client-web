@@ -29,7 +29,7 @@ const App = () => {
       <Route path='home' element={<Home/>} />
       <Route path='inbox' element={<Inbox />} />
       <Route path='location' element={<Location/>} />
-      <Route path='login' element={<Login/>} />
+      <Route path='login' element={<Login />} />
       <Route path='profile' element={<Profile selectFile = {selectFile} setSelectFile = {setSelectFile}/>} />
       <Route path='recent_payments' element={<Recent_payments/>} />
       <Route path='services' element={<Services/>} />
