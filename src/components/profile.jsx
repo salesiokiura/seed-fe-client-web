@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { ResponsiveWrapper } from '../hoc';
-import avatar from "../assets/Ellipse 1.png"
+//import avatar from "../assets/Ellipse 1.png"
 import { BsArrowLeftCircle } from 'react-icons/bs';
 
 
@@ -25,7 +25,7 @@ const onClick = () => {
           <div class="mb-4">
             <img
               className="w-24 h-24 rounded-full mx-auto"
-              src={avatar}
+              //src={avatar}
               alt="Profile"
               id="profile-pic"
               onClick={onClick}
