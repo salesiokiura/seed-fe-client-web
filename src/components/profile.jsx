@@ -5,12 +5,7 @@ import { BsArrowLeftCircle } from 'react-icons/bs';
 
 
 
-function profile({selectFile, setSelectFile}) {
-
-
-const onClick = () => {
-    setSelectFile(!selectFile)
-}
+function profile() {
   return (
     <div className="bg-[#2a4454] w-full h-screen mx-auto overflow-hidden">
       <a className='cursor-pointer absolute ml-0 mt-3 top-0 left-0 p-10px custom-button'>
@@ -25,13 +20,11 @@ const onClick = () => {
           <div class="mb-4">
             <img
               className="w-24 h-24 rounded-full mx-auto"
-              //src={avatar}
+              src="../assets/Ellipse 1.png"
               alt="Profile"
               id="profile-pic"
-              onClick={onClick}
             />
               
-            {selectFile ? ( <input type="file"accept="image/jpeg, image/png, image/jpg" id="input-file" ></input>) :""}
           </div>
           <div class="mb-4">
             <label class="block text-sm mt-10 font-light mb-1">DISPLAY NAME</label>
