@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ResponsiveWrapper } from '../hoc';
 
 // imports
-import backgroundImage from '../assets/image 12.png'
+//import backgroundImage from ''
 
 
 function Login() {
@@ -15,7 +15,7 @@ function Login() {
   };
 
     const containerStyle = {
-    backgroundImage: `url(${backgroundImage})`,
+    //backgroundImage: `url(${backgroundImage})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',

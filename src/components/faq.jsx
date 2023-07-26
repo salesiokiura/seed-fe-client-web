@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { ResponsiveWrapper } from "../hoc";
 import faqData from '../constants';
 import { BsArrowLeftCircle } from 'react-icons/bs';
@@ -6,7 +5,7 @@ import { BsArrowLeftCircle } from 'react-icons/bs';
 
 function FAQ() {
   return (
-    <div className="bg-[#2a4454] w-full h-screen mx-auto overflow-hidden">
+    <div className="bg-[#2a4454] w-full h-full mx-auto">
       <a className='cursor-pointer p-10px custom-button'><BsArrowLeftCircle className='py-[10px] pl-[10px] text-white text-[60px]'/></a>
 
       <div className='bg-white w-full h-full mt-10 rounded-[20px] flex flex-col items-center custom-container '>
