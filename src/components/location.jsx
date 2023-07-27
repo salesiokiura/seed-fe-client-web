@@ -4,9 +4,9 @@ import { ResponsiveWrapper } from '../hoc';
 
 function location() {
   return (
-    <h1 className="text-3xl font-bold">
+    <div className="text-3xl font-bold">
       Location
-    </h1>
+    </div>
   )
 }
 

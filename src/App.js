@@ -1,4 +1,5 @@
 import React from 'react'
+import "./index"
 import { Routes, Route, useNavigate } from 'react-router-dom'
 import Login_landing_page from './components/login_landing_page'
 import About_us from './components/about_us'
@@ -31,7 +32,7 @@ const App = () => {
       <Route path='profile' element={<Profile />} />
       <Route path='recent_payments' element={<Recent_payments/>} />
       <Route path='services' element={<Services/>} />
-      <Route path='sign_up' element={<Sign_up/>} />
+      <Route path='/' element={<Sign_up/>} />
     </Routes>
   )
 }

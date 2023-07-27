@@ -4,9 +4,9 @@ import { ResponsiveWrapper } from '../hoc';
 
 function Charging_transactions() {
   return (
-    <h1 className="text-3xl font-bold">
-      Location
-    </h1>
+    <div className="text-3xl font-bold">
+      Charging_transactions
+    </div>
   )
 }
 
