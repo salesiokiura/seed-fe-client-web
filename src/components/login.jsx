@@ -65,16 +65,16 @@ function Login() {
 
         <div className='flex items-center justify-evenly'> 
           <div className='relative 'style={buttonStyle}> 
-        <img src='../assets/image 8.png' className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2' />
-        
+              <img src='../assets/image 8.png' className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2' />
+              <span className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pt-12 whitespace-nowrap'>About us</span>
           </div>
            <div className='relative'style={buttonStyle}> 
-        <img src='../assets/image 9.png' className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2' />
-          
+            <img src='../assets/image 9.png' className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2' />
+              <span className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pt-12 whitespace-nowrap font-xs' >Contact us</span>
           </div>
           <div className='relative'style={buttonStyle}> 
         <img src='../assets/image 10.png' className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2' />
-          
+        <span className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pt-12 whitespace-nowrap'>FAQs</span>
           </div>
        </div>
        </div>
