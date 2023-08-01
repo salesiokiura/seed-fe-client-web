@@ -1,4 +1,5 @@
 import React from 'react'
+import "./index"
 import { Routes, Route, useNavigate } from 'react-router-dom'
 import Login_landing_page from './components/login_landing_page'
 import About_us from './components/about_us'
@@ -14,10 +15,8 @@ import Profile from './components/profile'
 import Recent_payments from './components/recent_payments'
 import Services from './components/services'
 import Sign_up from './components/sign_up'
-import { useState } from 'react'
 
 const App = () => {
-  const [selectFile, setSelectFile] = useState(false);
   return (
     <Routes>
       <Route path='login_landing_page' element={<Login_landing_page/>} />
@@ -29,11 +28,11 @@ const App = () => {
       <Route path='home' element={<Home/>} />
       <Route path='inbox' element={<Inbox />} />
       <Route path='location' element={<Location/>} />
-      <Route path='login' element={<Login/>} />
-      <Route path='profile' element={<Profile selectFile = {selectFile} setSelectFile = {setSelectFile}/>} />
+      <Route path='login' element={<Login />} />
+      <Route path='profile' element={<Profile />} />
       <Route path='recent_payments' element={<Recent_payments/>} />
       <Route path='services' element={<Services/>} />
-      <Route path='sign_up' element={<Sign_up/>} />
+      <Route path='/' element={<Sign_up/>} />
     </Routes>
   )
 }
