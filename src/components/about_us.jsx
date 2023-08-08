@@ -6,15 +6,17 @@ import { BsArrowLeftCircle } from 'react-icons/bs';
 function about_us() {
   return (
       <div style={{margin: 10}}> 
-       <div className=''>
-          <img src="./assets/SEED full logo.png" alt=""  className='absolute top-2 left-2 w-80'/>
-        </div>
+      
 
      <div className='bg-white w-full h-full mt-10 rounded-[20px] flex flex-col items-center custom-container '>
 
+        <div className=''>
+          <img src="./assets/SEED full logo.png" alt=""  className='top-2 left-2 w-80'/>
+        </div>
+       
       <h1 style={{ color: 'black' }} className="text-3xl font-bold">
       <div style={{margin: 10}}>
-           Sustainable Energy Education Districts (SEED)
+           Sustainable Energy Education Districts For Informal Settlements
       </div>
       </h1>
   
