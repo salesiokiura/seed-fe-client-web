@@ -130,6 +130,7 @@ const ForgotPassword = () => {
         <br />
         <center>
           <h3>OR</h3>
+          
         </center>
         <br />
         <center>
