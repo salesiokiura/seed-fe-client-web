@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
@@ -8,8 +9,7 @@ const ForgotPassword = () => {
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
   const submitForm = () => {
-    // Validate the email (e.g., check against a database)
-    // Assume the email is valid if it's not empty for simplicity
+    
     if (email) {
       setShowPasswordForm(true);
   
@@ -19,10 +19,10 @@ const ForgotPassword = () => {
   };
 
   const updatePassword = () => {
-    // Check if the password and password confirmation match
+   
+
     if (password && password === confirmPassword) {
-      // Handle password update logic here
-      // You can send the updated password to a server or perform any other action
+    
       setShowPasswordForm(false);
       setShowSuccessMessage(true);
     } else {
@@ -35,7 +35,7 @@ const ForgotPassword = () => {
       <div id="emailForm" style={{ display: !showPasswordForm && !showSuccessMessage ? "block" : "none" }}>
         <div className="form-group">
           <center>
-            <b><h1>Forgot Password?</h1></b>
+          <h2><b>Forgot Password ?</b></h2>
           </center>
           <br />
           <center>
@@ -53,7 +53,10 @@ const ForgotPassword = () => {
         </div>
         <br />
         <center>
-          <h4>Back to <b><a href="eg.html">Sign In</a></b></h4>
+          <h4> Back to <Link to="/login">
+                <b>Sign In</b>
+       </Link>
+</h4>
         </center>
         <br />
 
@@ -62,7 +65,10 @@ const ForgotPassword = () => {
         <br />
 
         <center>
-          <h4> Dont have an account ? <b><a href="eg.html">Sign Up</a></b></h4>
+          <h4> Dont have an account ? <Link to="/sign_up">
+                <b>Sign Up</b>
+       </Link>
+</h4>
         </center>
         <br />
         <br />
@@ -116,7 +122,10 @@ const ForgotPassword = () => {
         <br />
         <br />
         <center>
-          <h4> Dont have an account ?<b> <a href="eg.html">Sign Up</a></b></h4>
+          <h4> Dont have an account ? <Link to="/sign_up">
+                <b>Sign Up</b>
+       </Link>
+</h4>
         </center>
         <br />
         <center>
@@ -124,7 +133,10 @@ const ForgotPassword = () => {
         </center>
         <br />
         <center>
-          <h4> <b><a href="eg.html">Sign In</a></b></h4>
+          <h4> <Link to="/login">
+                <b>Sign In</b>
+       </Link>
+</h4>
         </center>
       </div>
 
