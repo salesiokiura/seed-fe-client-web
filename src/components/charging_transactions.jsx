@@ -106,7 +106,6 @@ function Charging_transactions() {
 }
 
 export default ResponsiveWrapper(Charging_transactions);
-=======
 import React from 'react';
 import { ResponsiveWrapper } from '../hoc';
 import { FaArrowLeft } from 'react-icons/fa';
