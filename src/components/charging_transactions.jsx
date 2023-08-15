@@ -1,15 +1,3 @@
-<<<<<<< Updated upstream
-import React from 'react'
-import { ResponsiveWrapper } from '../hoc';
-
-
-function Charging_transactions() {
-  return (
-    <div className="text-3xl font-bold">
-      Charging_transactions
-    </div>
-  )
-=======
 import React from 'react';
 import { ResponsiveWrapper } from '../hoc';
 import { FaArrowLeft } from 'react-icons/fa';
@@ -114,7 +102,7 @@ function Charging_transactions() {
       </div>
     </div>
   );
->>>>>>> Stashed changes
+
 }
 
 export default ResponsiveWrapper(Charging_transactions);

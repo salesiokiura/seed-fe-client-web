@@ -1,7 +1,4 @@
-<<<<<<< Updated upstream
-import React from 'react'
 import { ResponsiveWrapper } from '../hoc';
-=======
 import React, { useState } from 'react';
 
 function SignUp() {
@@ -63,7 +60,6 @@ function SignUp() {
       alert('Fill in all the fields');
     }
   };
-
 
 
   const containerStyle = {
@@ -152,14 +148,9 @@ function SignUp() {
     backgroundColor: '#1C2E3E', // Dark blue color for the checked checkbox tick
     border: '2px solid #1C2E3E', // Dark blue color for the checked checkbox border
   };
->>>>>>> Stashed changes
-
-function sign_up() {
+  
   return (
-<<<<<<< Updated upstream
     <div className="text-3xl font-bold">
-      sign_up
-=======
     <div className="login-container" style={containerStyle}>
       <img src="./assets/SEED full logo.png" alt="Logo" style={logoStyle} />
       <h1 style={{ marginBottom: '20px' }}>Sign Up</h1>
@@ -235,18 +226,18 @@ function sign_up() {
         <button
           style={{ ...buttonStyle, backgroundColor: '#1C2E3E' }} 
           type="submit"
+
           onClick={handleRegistration}
           disabled={!termsAccepted}
         >
           Sign Up
         </button>
         <p style={loginLinkStyle}>
-          Already have an account ?? <b><a href="#">Login</a></b>
+          Already have an account ? <b><a href="#">Login</a></b>
         </p>
       </div>
->>>>>>> Stashed changes
     </div>
-  )
+  );
 }
 
-export default ResponsiveWrapper(sign_up);
+export default SignUp;
