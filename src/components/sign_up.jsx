@@ -1,3 +1,4 @@
+import { ResponsiveWrapper } from '../hoc';
 import React, { useState } from 'react';
 
 function SignUp() {
@@ -31,6 +32,35 @@ function SignUp() {
   const handleTermsAcceptedChange = (event) => {
     setTermsAccepted(event.target.checked);
   };
+
+  const [registrationResult, setRegistrationResult] = useState(null);
+
+  const handleRegistration = async () => {
+    if (termsAccepted){
+      try{
+        const response = fetch('http://localhost:8080/api/register', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            name,
+            email,
+            phoneNumber,
+            password,
+          }),
+        });
+
+        const data = (await response).json();
+        setRegistrationResult(data.message);
+      } catch (err){
+        alert(err);
+      }
+    } else {
+      alert('Fill in all the fields');
+    }
+  };
+
 
   const containerStyle = {
     background: '#1C2E3E',
@@ -118,8 +148,9 @@ function SignUp() {
     backgroundColor: '#1C2E3E', // Dark blue color for the checked checkbox tick
     border: '2px solid #1C2E3E', // Dark blue color for the checked checkbox border
   };
-
+  
   return (
+    <div className="text-3xl font-bold">
     <div className="login-container" style={containerStyle}>
       <img src="./assets/SEED full logo.png" alt="Logo" style={logoStyle} />
       <h1 style={{ marginBottom: '20px' }}>Sign Up</h1>
@@ -195,12 +226,14 @@ function SignUp() {
         <button
           style={{ ...buttonStyle, backgroundColor: '#1C2E3E' }} 
           type="submit"
+
+          onClick={handleRegistration}
           disabled={!termsAccepted}
         >
           Sign Up
         </button>
         <p style={loginLinkStyle}>
-          Already have an account ?? <b><a href="#">Login</a></b>
+          Already have an account ? <b><a href="#">Login</a></b>
         </p>
       </div>
     </div>
