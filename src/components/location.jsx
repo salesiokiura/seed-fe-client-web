@@ -8,7 +8,7 @@ const LocationPage = () => {
       <div className="location-child"></div>
       <b className="location1">LOCATION</b>
       <div className="location-item"></div>
-      <img className="image-1-icon" alt="" src="./public/image-1@2x.png" />
+      <img className="image-1-icon" alt="" src="./public/assets/image-1@2x.png" />
 
       <b className="thika-road-mall-container">
         <p className="thika-road-mall">Thika Road Mall, Rm 23 , 2nd Floor</p>
@@ -18,7 +18,7 @@ const LocationPage = () => {
       <img
         className="screenshot-from-2022-12-13-04-"
         alt=""
-        src="./public/screenshot-from-20221213-044549-1@2x.png"
+        src="./public/assets/screenshot-from-20221213-044549-1@2x.png"
       />
 
       <a
@@ -29,7 +29,7 @@ const LocationPage = () => {
         FULL MAP
       </a>
       <div className="image-19" id="image19Container">
-        <img className="image-19-icon" alt="" src="./public/image-19@2x.png" />
+        <img className="image-19-icon" alt="" src="./public/assets/image-19@2x.png" />
       </div>
     </div>
   );
