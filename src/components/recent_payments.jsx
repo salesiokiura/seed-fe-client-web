@@ -1,18 +1,20 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { BsArrowLeftCircle } from 'react-icons/bs';
 
 const RecentPayments = () => {
   return (
     <div style={styles.body}>
       <div style={styles.container}>
         <header style={styles.header}>
-          <div style={styles.circleBackArrow}>
-            <a href="#" style={styles.backArrow}>&#8249;</a>
-          </div>
+          <Link to="/homepage" className="cursor-pointer p-10px custom-button">
+            <BsArrowLeftCircle className="py-[10px] pl-[10px] text-black text-[60px]" />
+          </Link>
           <h2 style={styles.headerTitle}>Recent Payments</h2>
         </header>
         <div style={styles.payments}>
           {generatePaymentElement("SA", "SEED", "123456", "-Ksh 500", "25th July, 10:30 AM")}
-          {generatePaymentElement("SA", "SEED", "654321", "+Ksh 300", "25th July, 11:15 AM")}
+          {generatePaymentElement("SA", "SEED", "654321", "-Ksh 300", "25th July, 11:15 AM")}
           {generatePaymentElement("SA", "SEED", "987654", "-Ksh 200", "25th July, 12:00 PM")}
           {generatePaymentElement("SA", "SEED", "456123", "-Ksh 100", "25th July, 1:30 PM")}
           {generatePaymentElement("SA", "SEED", "789456", "-Ksh 50", "25th July, 2:45 PM")}
@@ -62,7 +64,7 @@ const styles = {
   header: {
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center', // Center the "Recent Payments" header in the header container
+    justifyContent: 'center',
     marginBottom: '20px',
     backgroundColor: '#1f334b',
     color: '#fff',
@@ -73,22 +75,6 @@ const styles = {
     margin: 0,
     textTransform: 'uppercase',
   },
-  circleBackArrow: {
-    backgroundColor: '#132335',
-    color: '#fff',
-    width: '40px',
-    height: '40px',
-    borderRadius: '50%',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    border: '2px solid #f5f5f5',
-  },
-  backArrow: {
-    textDecoration: 'none',
-    color: '#fff',
-    fontSize: '18px',
-  },
   payments: {
     display: 'flex',
     flexDirection: 'column',
@@ -96,14 +82,14 @@ const styles = {
   payment: {
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'space-between', // Align payment elements in a row
+    justifyContent: 'space-between',
     marginBottom: '10px',
     padding: '10px',
     border: '0',
-    borderBottom: '1px solid #ccc', // Add a border-bottom to each payment element
+    borderBottom: '1px solid #ccc',
   },
   circle: {
-    backgroundColor: '#ffcccf', // Updated background color to light pink
+    backgroundColor: '#ffcccf',
     color: 'red',
     width: '40px',
     height: '40px',
