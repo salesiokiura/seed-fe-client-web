@@ -34,3 +34,19 @@ h1{
   }
 
 }
+
+.custom-scrollbar {
+  overflow: auto;
+  border-radius: 15px;
+  
+}
+
+/* Webkit-based browsers (Chrome, Safari, Edge) */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 18px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgb(84, 100, 114);
+  border-radius: 10px;
+}
