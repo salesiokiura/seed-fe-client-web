@@ -150,7 +150,10 @@ function SignUp() {
   };
   
   return (
-    <div>
+
+ 
+    <div className="text-3xl font-bold">
+
     <div className="login-container" style={containerStyle}>
       <img src="./assets/SEED full logo.png" alt="Logo" style={logoStyle} />
       <h1 style={{ marginBottom: '20px' }}>Sign Up</h1>
@@ -237,7 +240,7 @@ function SignUp() {
         </p>
       </div>
     </div>
-    </div>
+
   );
 }
 
