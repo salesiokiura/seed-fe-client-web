@@ -238,6 +238,8 @@ function SignUp() {
       </div>
     </div>
     </div>
+
+
   );
 }
 
