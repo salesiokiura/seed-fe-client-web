@@ -30,19 +30,11 @@ const onClick = () => {
           <div class="mb-4">
             <img
               className="w-24 h-24 rounded-full mx-auto"
-              //src={avatar}
-              alt="Profile"
-              id="profile-pic"
-              onClick={onClick}
-            />
               
-            {selectFile ? ( <input type="file"accept="image/jpeg, image/png, image/jpg" id="input-file" ></input>) :""}
-=======
               src="../assets/Ellipse 1.png"
               alt="Profile"
               id="profile-pic"
-            />
-              
+            />   
           </div>
           <div class="mb-4">
             <label class="block text-sm mt-10 font-light mb-1">DISPLAY NAME</label>
