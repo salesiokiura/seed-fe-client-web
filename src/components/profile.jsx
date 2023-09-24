@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { ResponsiveWrapper } from '../hoc';
+import { Link } from 'react-router-dom';
 //import avatar from "../assets/Ellipse 1.png"
 import { BsArrowLeftCircle } from 'react-icons/bs';
 
@@ -15,9 +16,11 @@ const onClick = () => {
 }
   return (
     <div className="bg-[#2a4454] w-full h-screen mx-auto overflow-hidden">
+    <Link to="/home">
       <a className='cursor-pointer absolute ml-0 mt-3 top-0 left-0 p-10px custom-button'>
         <BsArrowLeftCircle className='py-[10px] pl-[10px] text-white text-[60px]' />
       </a>
+    </Link>  
 
       <h1 className="text-3xl font-bold">
           My Profile
@@ -27,19 +30,11 @@ const onClick = () => {
           <div class="mb-4">
             <img
               className="w-24 h-24 rounded-full mx-auto"
-              //src={avatar}
-              alt="Profile"
-              id="profile-pic"
-              onClick={onClick}
-            />
               
-            {selectFile ? ( <input type="file"accept="image/jpeg, image/png, image/jpg" id="input-file" ></input>) :""}
-=======
               src="../assets/Ellipse 1.png"
               alt="Profile"
               id="profile-pic"
-            />
-              
+            />   
           </div>
           <div class="mb-4">
             <label class="block text-sm mt-10 font-light mb-1">DISPLAY NAME</label>
@@ -56,7 +51,9 @@ const onClick = () => {
           </div>
           <div class="flex justify-between">
             <button class="bg-teal-800 hover:bg-blue-600 mb-auto text-white font-medium py-2 px-4 rounded">Save</button>
-            <button class="bg-teal-800 hover:bg-blue-600 mb-auto text-white font-medium py-2 px-4 rounded">Logout</button>
+            <Link to="/login">
+              <button class="bg-teal-800 hover:bg-blue-600 mb-auto text-white font-medium py-2 px-4 rounded">Logout</button>
+            </Link>
           </div>
         </div>
       </body>

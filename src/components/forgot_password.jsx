@@ -42,12 +42,18 @@ const ForgotPassword = () => {
   return (
     <div style={styles.pageBackground}>
       <div style={styles.container}>
+
         <center>
-          <img src="./assets/SEED full logo.png" alt="Logo" />
+        
+        <img src="./assets/SEED full logo.png" alt="Logo" style={styles.logo} />
         </center>
         <div id="emailForm" style={{ display: !showPasswordForm && !showSuccessMessage ? "block" : "none" }}>
           <div className="form-group">
             <center>
+            <br />
+            <br />
+            <br />
+            <br />
               <h2><b>Forgot Password ?</b></h2>
             </center>
             <br />
@@ -163,6 +169,11 @@ const styles = {
     padding: '10px',
     borderRadius: '18px',
     border: '1px solid #ccc',
+  },
+  logo: {
+    position: 'absolute',
+    top: '0',
+    left: '0',
   },
   button: {
     width: '98%',
