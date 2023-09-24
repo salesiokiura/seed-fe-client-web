@@ -19,7 +19,7 @@ import Sign_up from './components/sign_up'
 const App = () => {
   return (
     <Routes>
-      <Route path='login_landing_page' element={<Login_landing_page/>} />
+      <Route path='/' element={<Login_landing_page/>} />
       <Route path='about_us' element={<About_us/>} />
       <Route path='charging_transactions' element={<Charging_transactions />} />
       <Route path='contact_us' element={<Contact_us/>} />
@@ -32,7 +32,7 @@ const App = () => {
       <Route path='profile' element={<Profile />} />
       <Route path='recent_payments' element={<Recent_payments/>} />
       <Route path='services' element={<Services/>} />
-      <Route path='/' element={<Sign_up/>} />
+      <Route path='sign_up' element={<Sign_up/>} />
     </Routes>
   )
 }

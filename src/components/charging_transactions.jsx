@@ -81,8 +81,8 @@ function Charging_transactions() {
   return (
     <div style={inboxStyles}>
       <div style={header}>
-        <Link to="/">
-          <button style={backButtonStyles}>
+        <Link to="/home">
+          <button style={backButtonStyles} id='back'>
             <FaArrowLeft style={{ color: 'white', fontSize: '20px' }} />
           </button>
         </Link>

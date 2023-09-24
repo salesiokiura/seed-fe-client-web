@@ -9,7 +9,7 @@ const ChargingTransaction = () => {
     <div className='rounded-xl shadow-xl p-6 bg-white'>
       <div className='flex justify-between items-center mb-4'>
         <p className='font-semibold'>CHARGING TRANSACTIONS</p>
-        <Link to='/' className='text-blue-500'>SEE ALL</Link>
+        <Link to='/charging_transactions' className='text-blue-500'>SEE ALL</Link>
       </div>
       <p className='font-light mb-3'>Brian234 | Samsung Galaxy A10</p>
 
@@ -67,11 +67,11 @@ const Services = () => {
 
       <div className='flex justify-between items-center mb-4'>
         <p className='font-semibold'>RECENT PAYMENTS</p>
-        <Link to='/' className='text-blue-500'>SEE ALL</Link>
+        <Link to='/recent_payments' className='text-blue-500'>SEE ALL</Link>
       </div>
       <div className='flex justify-between items-center mb-4'>
         <p className='font-semibold'>SERVICES</p>
-        <Link to='/' className='text-blue-500'>SEE ALL</Link>
+        <Link to='/recent_payments' className='text-blue-500'>SEE ALL</Link>
       </div>
       <div className='p-4'>
 

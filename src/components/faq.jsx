@@ -8,8 +8,8 @@ import { BsArrowLeftCircle } from 'react-icons/bs';
 function FAQ() {
   return (
     <div className="bg-[#2a4454] bg-auto w-full h-full min-h-screen">
-      <Link to="/login_landing_page">
-      <a className='cursor-pointer p-10px custom-button'><BsArrowLeftCircle className='py-[10px] pl-[10px] text-white text-[60px]'/></a>
+      <Link to="/">
+      <a className='cursor-pointer p-10px custom-button' id="back"><BsArrowLeftCircle className='py-[10px] pl-[10px] text-white text-[60px]'/></a>
       </Link>
       <div className='bg-white w-full h-full mt-10 rounded-[20px] flex flex-col items-center custom-container overflow-auto custom-scrollbar max-h-[700px] user-select-none scroll-smooth hover:scroll-auto'>
         <h1 className='pt-[25px] pb-[5px] text-[20px] font-bold text-black' >FAQS</h1>

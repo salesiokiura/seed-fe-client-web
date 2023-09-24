@@ -136,7 +136,7 @@ function inbox() {
   return (
     <div style={inboxStyles}>
       <div style={header}>
-      <Link to="/transactions"><button style={previousButtonStyles}><FaArrowLeft /></button></Link>
+      <Link to="/home"><button style={previousButtonStyles}><FaArrowLeft /></button></Link>
         <h2 className="text-center text-white font-bold text-2xl" >INBOX</h2>
       </div>
       <ul>
@@ -153,7 +153,7 @@ function inbox() {
       
       <div style={bottomButtonsStyles}>
       <Link to="/home"><button style={homeButtonStyles}><FaHome /></button></Link>
-      <Link to="/transactions"><button style={transactionButtonStyles}><FaMoneyBill /></button></Link>
+      <Link to="/charging_transactions"><button style={transactionButtonStyles}><FaMoneyBill /></button></Link>
       </div>
     </div>
   )
