@@ -7,7 +7,7 @@ function services() {
     <div className='bg-white '> 
       <div className=' bg-mainColor py-4 px-6 text-center relative'>
         <div className='w-10 h-10 rounded-full border border-white flex justify-center items-center absolute top-2'>
-            <Link to= '/'><span className='text-white text-xl'>&#8592;</span></Link>
+            <Link to= '/home'><span className='text-white text-xl'>&#8592;</span></Link>
         </div>
 
         <p className='text-white mb-20 text-lg'>SERVICES</p>

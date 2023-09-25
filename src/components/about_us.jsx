@@ -56,8 +56,8 @@ function about_us() {
         </div>
        </p>
 
-       <Link to="/login_landing_page">
-       <a className='cursor-pointer p-10px custom-button'><BsArrowLeftCircle className='py-[10px] pl-[10px] text-black text-[60px]'/></a>
+       <Link to="/">
+       <a id="back" className='cursor-pointer p-10px custom-button'><BsArrowLeftCircle className='py-[10px] pl-[10px] text-black text-[60px]'/></a>
        </Link>
 
       </div>

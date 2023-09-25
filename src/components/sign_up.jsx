@@ -233,7 +233,7 @@ function SignUp() {
           Sign Up
         </button>
         <p style={loginLinkStyle}>
-          Already have an account ? <b><a href="#">Login</a></b>
+          Already have an account ? <b><a href="/login">Login</a></b>
         </p>
       </div>
     </div>

@@ -1,6 +1,7 @@
-import React from 'react';
-import './global.css';
-import './index.css';
+import React from 'react'
+import { ResponsiveWrapper } from '../hoc';
+//import './global.css';
+//import './index.css'
 
 const LocationPage = () => {
   return (

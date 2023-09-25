@@ -1,129 +1,122 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
+import {  FaEyeSlash, FaLock, FaMailBulk } from 'react-icons/fa';
 import { ResponsiveWrapper } from '../hoc';
+import { Link } from 'react-router-dom';
 
-// imports
-//import backgroundImage from ''
+import useLogin from './useLogin'; // Import the custom hook
 
 
-function Login() {
-
-   const [ setInput1] = useState('');
-  const [ setInput2] = useState('');
-
-  const handleInputChange = (event, setInput) => {
-    setInput(event.target.value);
+const Login = () => {
+  const logo = process.env.PUBLIC_URL + '/assets/logo.png';
+  const [responseMessage, setResponseMessage] = useState('')
+  const [isError, setIsError] = useState('')
+  const [showPassword, setShowPassword] = useState(false);
+  const { formData, handleChange} = useLogin(); // Use the custom hook to get the required props
+  const toggleShowPassword = () => {
+    setShowPassword(!showPassword);
   };
 
-    const containerStyle = {
-    //backgroundImage: `url(${backgroundImage})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat',
-    height: '100vh', 
-    width:'100%',
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+        const response = await fetch('http://localhost:8080/api/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(formData)
+        });
     
-  };
+        const data = await response.json();
+    
+        if (response.ok) {
+          setResponseMessage(data.message);
+          setIsError(false);
+        } else {
+          setResponseMessage(data.message);
+          setIsError(true);
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        setResponseMessage('An error occurred');
+        setIsError(true);
+      };
+    };
 
-  const buttonStyle = {
-    backgroundColor:'#A9CBD6',
-    borderRadius:'20px',
-    height:'84px',
-    width:'84px',
-    marginRight:'10px',
-    marginLeft:'10px',
-  }
-
-  const iconStyle = {
-    backgroundColor:'#fff',
-    borderRadius:'50%',
-    height:'47px',
-    width:'47px',
-  }
-
-  const inputStyle = {
-    borderRadius: '25px',
-    height: '50px',
-    width:'100%',
-    padding: '15px',
-    backgroundColor: '#2A4454',
-    color: 'white',
-
-  }
   return (
-    <div className="body grid grid-rows-4 justify-items-center" style={containerStyle} >
-        <div className='background ' >
-          <img src='../assets/image 12.png' />
+    <div style={{ background: '#2A4454' }} className="h-screen">
+      <div className="form-container">
+        <div className='pt-16 pb-6 text-center cursor-pointer'>
+          
+          <a href="/login_landing">
+            <img src={logo} alt="" className='absolute p-4 top-0' />
+          </a>
+          <h2 className='text-6xl text-white mt-10'>Login</h2>
         </div>
 
-  
-
-        <div className='text-white mb-32'> 
-          <img src='../assets/SEED full logo (1) 1.png' />
-         </div>
-
-       <div className=''> 
-
-        <div className='flex items-center justify-evenly'> 
-          <div className='relative 'style={buttonStyle}> 
-              <img src='../assets/image 8.png' className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2' />
-              <span className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pt-12 whitespace-nowrap'>About us</span>
-          </div>
-           <div className='relative'style={buttonStyle}> 
-            <img src='../assets/image 9.png' className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2' />
-              <span className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pt-12 whitespace-nowrap font-xs' >Contact us</span>
-          </div>
-          <div className='relative'style={buttonStyle}> 
-        <img src='../assets/image 10.png' className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2' />
-        <span className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pt-12 whitespace-nowrap'>FAQs</span>
-          </div>
-       </div>
-       </div>
-
-       <div className='form w-80'> 
-           <form className='grid grid-rows-2 gap-y-6 w-full'>
-            <div className='w-full' >
+        <div className='w-[100%] h-[100%] bg-white p-6 rounded-t-3xl'>
+          <form onSubmit={handleSubmit} className='mt-8 space-y-6'>
+            <div className='grid grid-cols-1 gap-y-4'>
+              <div className="sign_up relative lg:w-[50%] lg:relative lg:left-[25%]">
+                <span className='absolute top-5 left-4 text-3xl '><FaMailBulk /></span>
+                <input
+                  style={{ background: '#D9D9D9' }}
+                  className='pl-16 placeholder-shown:font-semibold placeholder:text-black mt-1 p-4 block w-[100%] border rounded-3xl shadow-sm focus:ring focus:ring-opacity-50 focus:ring-indigo-500 focus:border-indigo-500'
+                  type="text"
+                  name="email"
+                  id="email"
+                  placeholder="tukexample@gmail.com"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div className="sign_up relative lg:w-[50%] lg:relative lg:left-[25%]">
+                <span className='absolute top-5 left-4 text-3xl '><FaLock /></span>
+                <input
+                  style={{ background: '#D9D9D9' }}
+                  className='pl-16 placeholder-shown:font-semibold placeholder:text-black mt-1 p-4 block w-full border rounded-3xl shadow-sm focus:ring focus:ring-opacity-50 focus:ring-indigo-500 focus:border-indigo-500'
+                  type={showPassword ? 'text' : 'password'}
+                  name="password"
+                  id="password"
+                  placeholder="example123@"
+                  value={formData.password}
+                  onChange={handleChange}
+                  required
+                />
+                <span className='absolute top-5 right-4 text-3xl cursor-pointer' onClick={toggleShowPassword}>
+                  <FaEyeSlash />
+                </span>
+              </div>
               
-              <input
-              style={inputStyle}
-                type="button"
-                id="input1"
-                value="Login"
-              
-                onChange={(e) => handleInputChange(e, setInput1)}
-              />
+             <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+                <p className='text-xl'>
+                <Link to="/forgot_password" className='text-blue-600' >
+                 Forgot Password
+                </Link>
+                </p>
+              </div>
+              <div className="mt-12"></div>
+              <div className="sign_up">
+                <button type="submit" style={{ background: '#2A4454' }} className='w-full p-4 text-white rounded-3xl hover:bg-indigo-600 transition-all duration-300 font-bold text-2xl lg:w-[50%] lg:relative lg:left-[25%]'>Login</button>
+              </div>
+
+             <div className='mt-3 text-center'>
+              <p className='text-xl'>
+                Are you a new User?{' '}
+                <Link to="/sign_up" className='text-blue-600'>
+                Sign Up
+                </Link>
+              </p>
             </div>
-            <div className='gap-y-6 w-full'>
-             
-              <input
-              style={inputStyle}
-                type="button"
-                id="input2"
-                value="Sign Up"
-
-                
-                onChange={(e) => handleInputChange(e, setInput2)}
-              />
             </div>
           </form>
-       </div>
-
-
-      <div className='m-4'> 
-
-          <div className='grid grid-cols-2 gap-x-40 '> 
-            <div className='relative'style={iconStyle}> 
-        <img src='../assets/image 9.png' className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2' />
-          </div>
-          <div className='relative'style={iconStyle}> 
-        <img src='../assets/image 10.png' className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2' />
-          </div>
-            
-         </div>
-       </div>
-
-       </div>
-
-  )
-}
+          {responseMessage && <p className={isError ? 'error' : 'success'}>{responseMessage}</p>}
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default ResponsiveWrapper(Login);

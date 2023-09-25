@@ -7,7 +7,7 @@ const RecentPayments = () => {
     <div style={styles.body}>
       <div style={styles.container}>
         <header style={styles.header}>
-          <Link to="/homepage" className="cursor-pointer p-10px custom-button">
+          <Link to="/home" className="cursor-pointer p-10px custom-button">
             <BsArrowLeftCircle className="py-[10px] pl-[10px] text-black text-[60px]" />
           </Link>
           <h2 style={styles.headerTitle}>Recent Payments</h2>
